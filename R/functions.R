@@ -186,7 +186,7 @@ rwaves <- function(x){
     dplyr::summarise(n = mean(sv)) %>%
     dplyr::rename(!!newname := n)
        if(nrow(out) == 0 | is.nan(out$f92_5)){
-           out[1, 1] <- 0
+           out[1, 1] <- NA
        }
        return(out)
     }
